@@ -1,0 +1,25 @@
+[package]
+name = "rquickjs-runtime"
+description = "Rust rapid integration with JavaScript"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/SpuerMomonga/rquickjs-runtime"
+readme = "README.md"
+authors = ["SpuerMomonga <spuermomonga@qq.com>"]
+
+[dependencies]
+rquickjs = { version = "0.9", default-features = false }
+
+[features]
+default = ["rquickjs/std"]
+
+full = [
+  "rquickjs/chrono",
+  "rquickjs/loader",
+  "rquickjs/dyn-load",
+  "rquickjs/either",
+  "rquickjs/indexmap",
+  "rquickjs/macro",
+  "rquickjs/phf",
+]
